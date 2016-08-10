@@ -25,7 +25,7 @@
   "defaults": {
     "prefix": "d4n",
     "sourceDir": "src",
-    "styleExt": "sass",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "lazyRoutePrefix": "+"
   }
