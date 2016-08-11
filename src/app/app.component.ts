@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import {} from './rxjs-operators';
 
 @Component({
   selector: 'd4n-root',
@@ -7,7 +7,4 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
   styleUrls: ['app.component.scss']
 })
 
-export class AppComponent {
-
-  title = 'app works!';
-}
+export class AppComponent {}
