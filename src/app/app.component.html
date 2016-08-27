@@ -1,8 +1,10 @@
 <md-sidenav-layout fullscreen>
-
   <md-sidenav #start #sidenav mode="over">
-      Start Sidenav.
-      <br>
+      <md-nav-list>
+        <a md-list-item [routerLink]="['startpage']">Test</a>
+        <a md-list-item [routerLink]="['startpage']">Test</a>
+      </md-nav-list>
+      <hr>
       <button md-raised-button #mybutton (click)="start.close()">Close</button>
   </md-sidenav>
 
