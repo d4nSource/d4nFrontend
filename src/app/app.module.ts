@@ -5,6 +5,7 @@ import { HttpModule }  from '@angular/http';
 
 import { MdToolbarModule }  from '@angular2-material/toolbar';
 import { MdSidenavModule }  from '@angular2-material/sidenav';
+import { MdIconModule }     from '@angular2-material/icon'
 import { MdCardModule }     from '@angular2-material/card';
 import { MdButtonModule }   from '@angular2-material/button';
 
@@ -18,7 +19,7 @@ import { StartpageComponent }   from './startpage/startpage.component';
     imports:        [BrowserModule,
                      routing,
                      HttpModule,
-                     MdToolbarModule, MdSidenavModule, MdCardModule, MdButtonModule   ],
+                     MdToolbarModule, MdSidenavModule, MdCardModule, MdButtonModule, MdIconModule ],
     declarations:   [AppComponent,
                      StartpageComponent],
     providers:      [appRoutingProviders],
