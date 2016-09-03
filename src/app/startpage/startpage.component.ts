@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject }  from '@angular/core';
-import { StartpageService }   from './shared/startpage.service'
-import { Startpage }          from './startpage';
+import { Component, OnInit, Injectable }  from '@angular/core';
+import { StartpageService }   from './shared/startpage.service';
+import {Startpage} from './startpage';
 
 @Component({
   templateUrl:  'startpage.component.html',
@@ -8,18 +8,18 @@ import { Startpage }          from './startpage';
   providers: [StartpageService]
 })
 
+@Injectable()
 export class StartpageComponent implements OnInit {
 
-  constructor(private _startpageService: StartpageService) { }
-  
-  startpages: Startpage[];
+ startpages: Startpage[] = [];
+
+ constructor(private _startpageService: StartpageService) { }
 
   ngOnInit() {
     this._startpageService.getStartpage()
       .subscribe(
         startpages => {
           this.startpages = startpages;
-          this._startpageService = startpages;
         }
       );
   }

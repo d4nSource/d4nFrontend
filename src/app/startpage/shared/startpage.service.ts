@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
@@ -12,13 +12,13 @@ export class StartpageService {
   startpage: Startpage[] = [];
 
   constructor( private _http: Http) {}
-    
+
   getStartpage() {
     return this._http.get('http://localhost:3000/message')
       .map(response => {
         const data = response.json();
         let objs: any [] = [];
-        for (let i=0; i<data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
           let startpage =  new Startpage(data[i].id, data[i].content);
           objs.push(startpage);
         }
@@ -26,7 +26,6 @@ export class StartpageService {
       })
       .catch(error => Observable.throw(error.content));
   }
-  
 }
 
 /*private startpageUrl = 'app/startpage';

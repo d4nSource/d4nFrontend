@@ -1,21 +1,9 @@
 <md-sidenav-layout fullscreen>
-<<<<<<< HEAD
   <md-sidenav #start #sidenav mode="over">
-      <md-nav-list>
         <a md-list-item [routerLink]="['startpage']">Test</a>
         <a md-list-item [routerLink]="['startpage']">Test</a>
-      </md-nav-list>
       <hr>
       <button md-raised-button #mybutton (click)="start.close()">Close</button>
-=======
-  <md-sidenav #start #sidenav mode="over" class='sidenav'>
-    <md-nav-list>
-      <a md-list-item [routerLink]="['startpage']">Startpage</a>
-      <a md-list-item [routerLink]="['secondpage']">Secondpage</a>     
-     </md-nav-list>
-     <hr>
-     <button md-raised-button #mybutton (click)="start.close()">Close</button>
->>>>>>> 4ca920389f5a5faeade37e0dc0ec46c0dc25a496
   </md-sidenav>
   <div>
   <md-toolbar color="primary">
@@ -23,6 +11,6 @@
      <span style="padding-left: 30px;">D4n Smart</span>
   </md-toolbar>
   </div>
-  <router-outlet></router-outlet> 
+  <router-outlet></router-outlet>
 </md-sidenav-layout>
 

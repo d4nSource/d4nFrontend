@@ -9,7 +9,7 @@ import { MdCardModule }     from '@angular2-material/card';
 import { MdButtonModule }   from '@angular2-material/button';
 
 
-import { AppComponent }                 from './app.component'; 
+import { AppComponent }                 from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { StartpageComponent }   from './startpage/startpage.component';
