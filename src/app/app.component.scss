@@ -1,9 +1,17 @@
 md-sidenav-layout {
       background: rgba(0,0,0,0.08);
+      border: 3px solid black;
 }
+<<<<<<< HEAD
 
 md-sidenav {
     min-width: 25%;
+=======
+.sidenav {
+      width: 250px;
+      padding: 10px;
+}
+>>>>>>> 4ca920389f5a5faeade37e0dc0ec46c0dc25a496
 
     [md-button] {
       width: 100%;
