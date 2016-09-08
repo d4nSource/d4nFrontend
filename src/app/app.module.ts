@@ -7,6 +7,7 @@ import { MdToolbarModule }  from '@angular2-material/toolbar';
 import { MdSidenavModule }  from '@angular2-material/sidenav';
 import { MdCardModule }     from '@angular2-material/card';
 import { MdButtonModule }   from '@angular2-material/button';
+import { MdListModule } from '@angular2-material/list/list';
 
 
 import { AppComponent }                 from './app.component';
@@ -18,11 +19,11 @@ import { StartpageComponent }   from './startpage/startpage.component';
     imports:        [BrowserModule,
                      routing,
                      HttpModule,
-                     MdToolbarModule, MdSidenavModule, MdCardModule, MdButtonModule   ],
+                     MdToolbarModule.forRoot(), MdSidenavModule.forRoot(), MdCardModule.forRoot(), MdButtonModule.forRoot(), MdListModule ],
     declarations:   [AppComponent,
                      StartpageComponent],
     providers:      [appRoutingProviders],
     bootstrap:      [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule { };

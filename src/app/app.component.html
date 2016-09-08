@@ -1,16 +1,15 @@
 <md-sidenav-layout fullscreen>
   <md-sidenav #start #sidenav mode="over">
-        <a md-list-item [routerLink]="['startpage']">Test</a>
-        <a md-list-item [routerLink]="['startpage']">Test</a>
+    <md-nav-list>
+        <md-list-item [routerLink]="['startpage']">Test</md-list-item>
+        <md-list-item [routerLink]="['startpage']">Test</md-list-item>
       <hr>
-      <button md-raised-button #mybutton (click)="start.close()">Close</button>
+    <button md-raised-button #mybutton (click)="start.close()">Close</button>
+    </md-nav-list>
   </md-sidenav>
-  <div>
   <md-toolbar color="primary">
     <button md-raised-button (click)="sidenav.toggle()" color="primary">menue</button>
      <span style="padding-left: 30px;">D4n Smart</span>
   </md-toolbar>
-  </div>
   <router-outlet></router-outlet>
 </md-sidenav-layout>
-
