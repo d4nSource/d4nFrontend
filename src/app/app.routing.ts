@@ -1,8 +1,6 @@
 import { Routes, RouterModule }  from '@angular/router';
-import { StartpageComponent } from './startpage/startpage.component';
 
 const appRoutes: Routes = [
-    { path: '', component: StartpageComponent }
 
 ];
 

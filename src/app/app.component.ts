@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {} from './rxjs-operators';
+import { } from './rxjs-operators';
 
 @Component({
   selector: 'd4n-root',
