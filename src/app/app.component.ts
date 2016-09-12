@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { } from './rxjs-operators';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'd4n-root',
@@ -7,4 +8,13 @@ import { } from './rxjs-operators';
   styleUrls: ['app.component.scss']
 })
 
-export class AppComponent {}
+export class AppComponent {
+
+  constructor(private _router: Router) {
+
+  }
+
+  onClick() {
+    this._router.navigate(['dashboard', 2]);
+  }
+}

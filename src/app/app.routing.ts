@@ -1,11 +1,13 @@
-import { Routes, RouterModule }  from '@angular/router';
+import { RouterModule }  from '@angular/router';
 
-const appRoutes: Routes = [
+import { DashboardComponent }    from './dashboard/dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-];
 
-export const appRoutingProviders: any [] = [
+export const routing = RouterModule.forRoot([
+    { path: '', component: DashboardComponent},
+    { path: 'dashboard', component: DashboardComponent},
+    { path: '**', component: NotFoundComponent}
+]);
 
-];
 
-export const routing = RouterModule.forRoot(appRoutes);

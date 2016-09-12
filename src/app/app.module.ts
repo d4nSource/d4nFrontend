@@ -11,7 +11,7 @@ import { MdListModule }     from '@angular2-material/list/list';
 
 
 import { AppComponent }                 from './app.component';
-import { routing, appRoutingProviders } from './app.routing';
+import { routing } from './app.routing';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { routing, appRoutingProviders } from './app.routing';
                      MdButtonModule.forRoot(),
                      MdListModule.forRoot() ],
     declarations:   [AppComponent],
-    providers:      [appRoutingProviders],
+    providers:      [],
     bootstrap:      [AppComponent]
 })
 
