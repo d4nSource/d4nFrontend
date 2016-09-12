@@ -10,7 +10,7 @@ import { MdCardModule }     from '@angular2-material/card';
 import { MdButtonModule }   from '@angular2-material/button';
 import { MdListModule }     from '@angular2-material/list/list';
 
-import { AppComponent }                 from './app.component';
+import { AppComponent }     from './app.component';
 
 @NgModule({
     imports:        [BrowserModule,
