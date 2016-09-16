@@ -7,6 +7,9 @@ import { NgForm }             from '@angular/forms';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+  // default values inside the form
+  // [ngModel] one-way databinding required inside the form
+  // [(ngModel)] 2-way databinding
   user = {
     username: 'Hello',
     password: ''
