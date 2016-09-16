@@ -1,0 +1,18 @@
+<h1>Template Driven Form</h1>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" [ngModel]="user.username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">eMail</label>
+      <input type="text" class="form-control" id="email" ngModel name="email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" ngModel name="password" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>

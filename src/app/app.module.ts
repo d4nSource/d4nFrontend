@@ -17,6 +17,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { NotFoundComponent }    from './not-found/not-found.component';
 import { UserService }          from './shared/user.service';
 import { AuthService }          from './shared/auth.service';
+import { UserComponent }        from './user/user.component';
 
 @NgModule({
     imports:        [BrowserModule,
@@ -28,7 +29,7 @@ import { AuthService }          from './shared/auth.service';
                      MdCardModule.forRoot(),
                      MdButtonModule.forRoot(),
                      MdListModule.forRoot() ],
-    declarations:   [DashboardComponent, NotFoundComponent, AppComponent],
+    declarations:   [DashboardComponent, NotFoundComponent, AppComponent, UserComponent],
     providers:      [UserService, AuthService],
     bootstrap:      [AppComponent]
 })
