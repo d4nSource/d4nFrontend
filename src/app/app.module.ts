@@ -10,6 +10,7 @@ import { MdSidenavModule }      from '@angular2-material/sidenav';
 import { MdCardModule }         from '@angular2-material/card';
 import { MdButtonModule }       from '@angular2-material/button';
 import { MdListModule }         from '@angular2-material/list/list';
+import { MdInputModule }        from '@angular2-material/input';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
@@ -30,7 +31,9 @@ import { SignupComponent }      from './user/signup.component';
         MdSidenavModule.forRoot(),
         MdCardModule.forRoot(),
         MdButtonModule.forRoot(),
-        MdListModule.forRoot()
+        MdListModule.forRoot(),
+        MdCardModule.forRoot(),
+        MdInputModule.forRoot()         // adds md-input directives
     ],
     declarations: [                         // adds components, pipes
         DashboardComponent,

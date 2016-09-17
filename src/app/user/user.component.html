@@ -3,16 +3,16 @@
   <div>
     <div class="form-group">
       <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required>
+      <md-input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required></md-input>
     </div>
     <div class="form-group">
       <label for="email">eMail</label>
-      <input type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email">
+      <md-input type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email"></md-input>
     </div>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" ngModel name="password" required #email="ngModel">
+    <md-input type="password" class="form-control" id="password" ngModel name="password" required #email="ngModel"></md-input>
   </div>
   <button md-raised-button color="primary" type="submit" [disabled]="!f.valid">Submit</button>
 </form>
