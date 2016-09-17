@@ -1,7 +1,7 @@
 import { BrowserModule }        from '@angular/platform-browser';
 import { NgModule }             from '@angular/core';
 
-import { FormsModule }          from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }          from '@angular/forms';
 import { HttpModule }           from '@angular/http';
 import { routing }              from './app.routing';
 
@@ -12,26 +12,35 @@ import { MdButtonModule }       from '@angular2-material/button';
 import { MdListModule }         from '@angular2-material/list/list';
 
 import { AppComponent }         from './app.component';
-
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { NotFoundComponent }    from './not-found/not-found.component';
 import { UserService }          from './shared/user.service';
 import { AuthService }          from './shared/auth.service';
 import { UserComponent }        from './user/user.component';
+import { SignupComponent }      from './user/signup.component';
 
 @NgModule({
-    imports:        [BrowserModule,
-                     routing,
-                     FormsModule,
-                     HttpModule,
-                     MdToolbarModule.forRoot(),
-                     MdSidenavModule.forRoot(),
-                     MdCardModule.forRoot(),
-                     MdButtonModule.forRoot(),
-                     MdListModule.forRoot() ],
-    declarations:   [DashboardComponent, NotFoundComponent, AppComponent, UserComponent],
-    providers:      [UserService, AuthService],
-    bootstrap:      [AppComponent]
+    imports: [                          // adds other modules (packages)
+        BrowserModule,
+        routing,
+        FormsModule,
+        ReactiveFormsModule,            // to use model driven forms
+        HttpModule,
+        MdToolbarModule.forRoot(),
+        MdSidenavModule.forRoot(),
+        MdCardModule.forRoot(),
+        MdButtonModule.forRoot(),
+        MdListModule.forRoot()
+    ],
+    declarations: [                         // adds components, pipes
+        DashboardComponent,
+        NotFoundComponent,
+        AppComponent,
+        UserComponent,
+        SignupComponent
+    ],
+    providers: [UserService, AuthService],  // adds services to the whole app
+    bootstrap: [AppComponent]               // start component
 })
 
 export class AppModule { };

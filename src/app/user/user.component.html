@@ -14,5 +14,5 @@
     <label for="password">Password</label>
     <input type="password" class="form-control" id="password" ngModel name="password" required #email="ngModel">
   </div>
-  <button type="submit" [disabled]="!f.valid">Submit</button>
+  <button md-raised-button color="primary" type="submit" [disabled]="!f.valid">Submit</button>
 </form>
