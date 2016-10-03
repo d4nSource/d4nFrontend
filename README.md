@@ -1,31 +1,51 @@
-# D4nSmartFe
+# Readme File
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.14.
+## Table of Contents
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [Prerequisite](#Prerequisite)
+* [Installation](#installation)
+* [Angular CLI](#angular-cli)
+* [Documentation (Markdown)](#documentation)
 
-## Code scaffolding
+## Prerequisite
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+On a Windows environment NPM binary packages are stored inside the folder /node_modules/bin. 
+Because this folder isn't inside the path environment these binaries need to be started with absolute path: 
 
-## Build
+```bash
+./node_modules/bin/<program> 
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+To simplify the usage we can use a global version which can be used for all projects. 
 
-## Running unit tests
+```bash
+npm install -g angular-cli typescript 
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
+As you already cloned the project via GIT, you can install the packages via:
 
-## Deploying to Github Pages
+```bash
+npm install
+```
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+## Angular-CLI
 
-## Further help
+This project uses Angular CLI to create componts and handle the testserver. More informations can be found [here](docs/angular-cli.md)
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Documentation
+
+This projects uses Markdown for documentation. 
+
+### separate documentations:
+
+| Content                              | Documentations                      | Status      | 
+|--------------------------------------|-------------------------------------|-------------|
+| Markdown Cheatsheet                  | [Docs](docs/mardown.md)             | WIP         |
+| Angular CLI Cheatsheet               | [Docs](docs/angular-cli.md)         | WIP         |
+| Typescript Cheatsheet                | [Docs](#)                           | not started |
+| Design Document                      | [Docs](#)                           | not started |
+| Developer Guideline                  | [Docs](#)                           | not started |
+| Changelog                            | [Docs](#)                           | not started |

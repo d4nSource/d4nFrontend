@@ -5,12 +5,7 @@ import { FormsModule, ReactiveFormsModule }          from '@angular/forms';
 import { HttpModule }           from '@angular/http';
 import { routing }              from './app.routing';
 
-import { MdToolbarModule }      from '@angular2-material/toolbar';
-import { MdSidenavModule }      from '@angular2-material/sidenav';
-import { MdCardModule }         from '@angular2-material/card';
-import { MdButtonModule }       from '@angular2-material/button';
-import { MdListModule }         from '@angular2-material/list';
-import { MdInputModule }        from '@angular2-material/input';
+import { MaterialModule }       from '@angular/material';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
@@ -21,19 +16,13 @@ import { UserComponent }        from './user/user.component';
 import { SignupComponent }      from './user/signup.component';
 
 @NgModule({
-    imports: [                          // adds other modules (packages)
+    imports: [                              // adds other modules (packages)
         BrowserModule,
         routing,
         FormsModule,
-        ReactiveFormsModule,            // to use model driven forms
+        ReactiveFormsModule,                // to use model driven forms
         HttpModule,
-        MdToolbarModule.forRoot(),
-        MdSidenavModule.forRoot(),
-        MdCardModule.forRoot(),
-        MdButtonModule.forRoot(),
-        MdListModule.forRoot(),
-        MdCardModule.forRoot(),         // adds md-card and md-content directives
-        MdInputModule.forRoot()         // adds md-input directives
+        MaterialModule.forRoot()            // module for all Material2 components
     ],
     declarations: [                         // adds components, pipes
         DashboardComponent,
