@@ -1,5 +1,8 @@
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 /* You can add global styles to this file, and also import other style files */
-// @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+//@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 @import '~@angular/material/core/theming/all-theme';
 // Plus imports for other components in your app.
 
@@ -23,3 +26,14 @@ $theme: md-light-theme($primary, $accent, $warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($theme);
+
+// definition of new alternativ theme
+
+.dark-theme {
+    $dark-primary: md-palette($md-pink, 700);
+    $dark-accent: md-palette($md-blue-grey);
+
+    $dark-theme: md-dark-theme($dark-primary, $dark-accent);
+
+    @include angular-material-theme($dark-theme)
+}

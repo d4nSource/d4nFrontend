@@ -1,19 +1,31 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+* {
+    -webkit-font-smooting: antialiased;
+    -moz-osx-font-smooting: antialiased;
+}
+
+.fill-remaining-space {
+  // This fills the remaining space, by using flexbox. 
+  // Every toolbar row uses a flexbox row layout.
+  flex: 1 1 auto;
+}
+
 md-sidenav-layout {
-      background: rgba(0,0,0,0.08);
-      border: 3px solid black;
+      height: 100vh; 
+}
+
+.icon-20 {
+  font-size: 20px;
+}
+
+[md-raised-button] {
+    width: 100%;
 }
 
 md-sidenav {
-    min-width: 25%;
-
-.sidenav {
-      width: 250px;
-      padding: 10px;
+      width: 320px;
 }
-    [md-button] {
-      width: 100%;
-      position: relative;
-      bottom: 0;
-      margin: 24px 0;
-    }
-  }

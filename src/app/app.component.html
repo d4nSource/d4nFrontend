@@ -1,19 +1,45 @@
-<md-sidenav-layout fullscreen>
-  <md-sidenav #start #sidenav mode="over">
-    <md-nav-list>
-        <md-list-item routerLink="dashboard" (click)="start.close()">Dashboard</md-list-item>
-        <md-list-item [routerLink]="['dashboard', 1]" (click)="start.close()">Dashboard with Option</md-list-item>
-        <md-list-item routerLink="user" *ngIf="isLoggedIn()" (click)="start.close()">User Administration</md-list-item>
-        <md-list-item routerLink="signup" *ngIf="isLoggedIn()" (click)="start.close()">Create new User</md-list-item>
-        <md-list-item routerLink="signin" *ngIf="!isLoggedIn()" (click)="start.close()">Login</md-list-item>
-        <md-list-item routerLink="signout" *ngIf="isLoggedIn()" (click)="start.close()">Logout</md-list-item>
-      <hr>
-    <button md-raised-button #mybutton (click)="start.close()">Close</button>
-    </md-nav-list>
-  </md-sidenav>
+<div [class.dark-theme]="isDarkTheme">
   <md-toolbar color="primary">
-    <button md-raised-button (click)="sidenav.toggle()" color="primary">menue</button>
-     <span style="padding-left: 30px;">D4n Smart</span>
+    <span>
+      <button md-icon-button>
+        <md-icon class="icon-20" (click)="sidenav.open()">pets</md-icon>
+        D4n Smarthome
+      </button>
+    </span>
+    <span class="fill-remaining-space"></span>
+    <span>
+      <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+    </span>
   </md-toolbar>
-  <router-outlet></router-outlet>
-</md-sidenav-layout>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Settings</button>
+    <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle Theme</button>
+  </md-menu>
+  <md-sidenav-layout>
+    <md-sidenav #sidenav align="end" mode="side">
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>Details</template>
+          <template md-tab-content>
+            <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+          </template>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>Feed</template>
+          <template md-tab-content></template>
+        </md-tab>
+      </md-tab-group>
+      <md-nav-list>
+        <md-list-item routerLink="dashboard" (click)="sidenav.close()">Dashboard</md-list-item>
+        <md-list-item [routerLink]="['dashboard', 1]" (click)="sidenav.close()">Dashboard with Option</md-list-item>
+        <md-list-item routerLink="user" *ngIf="isLoggedIn()" (click)="sidenav.close()">User Administration</md-list-item>
+        <md-list-item routerLink="signup" *ngIf="isLoggedIn()" (click)="sidenav.close()">Create new User</md-list-item>
+        <md-list-item routerLink="signin" *ngIf="!isLoggedIn()" (click)="sidenav.close()">Login</md-list-item>
+        <md-list-item routerLink="signout" *ngIf="isLoggedIn()" (click)="sidenav.close()">Logout</md-list-item>
+      </md-nav-list>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+  </md-sidenav-layout> 
+</div>

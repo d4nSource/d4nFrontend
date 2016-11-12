@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
 import { Router }    from '@angular/router';
+
+import { MdSidenav } from '@angular/Material';
 
 import { AuthService }    from './shared/auth.service';
 
@@ -11,6 +12,10 @@ import { AuthService }    from './shared/auth.service';
 })
 
 export class AppComponent {
+
+@ViewChild('sidenav') sidenav: MdSidenav;
+
+  isDarkTheme = false;
 
   constructor(private _router: Router, private authService: AuthService) {
 
