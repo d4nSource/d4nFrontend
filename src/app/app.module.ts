@@ -14,12 +14,13 @@ import { UserService }          from './shared/user.service';
 import { AuthService }          from './shared/auth.service';
 import { UserComponent }        from './user/user.component';
 import { SignupComponent }      from './user/signup.component';
+import { SigninComponent }      from './user/signin.component';
 
 @NgModule({
     imports: [                              // adds other modules (packages)
         BrowserModule,
         routing,
-        FormsModule,
+        FormsModule,                        // to use template driven forms
         ReactiveFormsModule,                // to use model driven forms
         HttpModule,
         MaterialModule.forRoot()            // module for all Material2 components
@@ -29,7 +30,8 @@ import { SignupComponent }      from './user/signup.component';
         NotFoundComponent,
         AppComponent,
         UserComponent,
-        SignupComponent
+        SignupComponent,
+        SigninComponent
     ],
     providers: [UserService, AuthService],  // adds services to the whole app
     bootstrap: [AppComponent]               // start component

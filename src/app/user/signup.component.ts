@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthService } from '../shared/auth.service';
+
+import { User } from '../shared/user.model';
 
 @Component({
-    selector: 'signup-selector',
+    selector: 'app-signup',
     templateUrl: 'signup.component.html'
 })
 export class SignupComponent implements OnInit {
 
     signupForm: FormGroup;
 
-    constructor(private _formBuilder: FormBuilder) { }
+    constructor(private _formBuilder: FormBuilder, private authService: AuthService) { }
 
     ngOnInit() {
 //       this.signupForm = new FormGroup({
@@ -18,7 +21,9 @@ export class SignupComponent implements OnInit {
 //           'password': new FormControl('', Validators.required)
  //       });
         this.signupForm = this._formBuilder.group({
-            'username': ['', [Validators.required, this.customValidator]],
+            'nickname': ['', [Validators.required, this.customValidator]],
+            'firstname': [''],
+            'lastname': [''],
             'email': ['', [
                     Validators.required,
                     Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
@@ -40,7 +45,12 @@ export class SignupComponent implements OnInit {
 
      }
 
-    onSubmit() {
-        console.log(this.signupForm.valid);
+    onSubmit(user: User) {
+        this.authService.signup(user)
+            .subscribe(
+                data => console.log(data),
+                error => console.error(error)
+            );
+        this.signupForm.reset();
     }
 }

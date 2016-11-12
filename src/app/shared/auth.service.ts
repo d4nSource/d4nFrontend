@@ -1,7 +1,7 @@
 import { Injectable }     from '@angular/core';
-import { Http, Headers}   from '@angular/http';
+import { Http, Headers, Response}   from '@angular/http';
 
-import { User }       from './user';
+import { User }       from './user.model';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -15,8 +15,16 @@ export class AuthService {
   signup(user: User) {
       const body = JSON.stringify(user);
       const headers = new Headers({'Content-Type': 'application/json'});
-      return this._http.post('localhost:3000/user', body, {headers: headers})
-        .map(response => response.json())
-        .catch(error => Observable.throw(error.json()));
+      return this._http.post('http://localhost:3000/user', body, {headers: headers})
+        .map((response: Response) => response.json())
+        .catch((error: Response) => Observable.throw(error.json()));
+  }
+
+  signin (user: User) {
+    const body = JSON.stringify(user);
+    const headers = new Headers({'Content-Type': 'application/json'});
+    return this._http.post('http://localhost:3000/user/signin', body, {headers: headers})
+        .map((response: Response) => response.json())
+        .catch((error: Response) => Observable.throw(error.json()));
   }
 }

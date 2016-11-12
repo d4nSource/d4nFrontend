@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Router }    from '@angular/router';
 
 @Component({
-  selector: 'd4n-root',
+  selector: 'app-d4n-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
