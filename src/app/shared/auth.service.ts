@@ -15,7 +15,8 @@ export class AuthService {
   signup(user: User) {
       const body = JSON.stringify(user);
       const headers = new Headers({'Content-Type': 'application/json'});
-      return this._http.post('http://localhost:3000/user', body, {headers: headers})
+      const token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
+      return this._http.post('http://localhost:3000/user/new' + token, body, {headers: headers})
         .map((response: Response) => response.json())
         .catch((error: Response) => Observable.throw(error.json()));
   }
