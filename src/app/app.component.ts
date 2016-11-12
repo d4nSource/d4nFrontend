@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router }    from '@angular/router';
 
-import { MdSidenav } from '@angular/Material';
+import { MdSidenav } from '@angular/material';
 
 import { AuthService }    from './shared/auth.service';
 
