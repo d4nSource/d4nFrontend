@@ -1,17 +1,44 @@
-<md-sidenav-layout fullscreen>
-  <md-sidenav #start #sidenav mode="over">
-    <md-nav-list>
-        <md-list-item routerLink="dashboard" (click)="start.close()">Dashboard</md-list-item>
-        <md-list-item [routerLink]="['dashboard', 1]" (click)="start.close()">Dashboard with Option</md-list-item>
-        <md-list-item routerLink="user" (click)="start.close()">User Administration</md-list-item>
-        <md-list-item routerLink="signup" (click)="start.close()">Create new User</md-list-item>
-      <hr>
-    <button md-raised-button #mybutton (click)="start.close()">Close</button>
-    </md-nav-list>
-  </md-sidenav>
+<div [class.dark-theme]="isDarkTheme">
   <md-toolbar color="primary">
-    <button md-raised-button (click)="sidenav.toggle()" color="primary">menue</button>
-     <span style="padding-left: 30px;">D4n Smart</span>
+    <span>
+      <button md-icon-button>
+        <md-icon class="icon-20" (click)="primsidenav.open()">pets</md-icon>
+        D4n Smarthome
+      </button>
+    </span>
+    <span class="fill-remaining-space"></span>
+    <span>
+      <button md-icon-button>
+        <md-icon>more_vert</md-icon>
+      </button>
+    </span>
   </md-toolbar>
-  <router-outlet></router-outlet>
-</md-sidenav-layout>
+
+  <md-sidenav-layout>
+    <md-sidenav #primsidenav mode="over">
+      <md-nav-list>
+        <md-list-item routerLink="dashboard" (click)="primsidenav.close()">Dashboard</md-list-item>
+        <md-list-item [routerLink]="['dashboard', 1]" (click)="primsidenav.close()">Dashboard with Option</md-list-item>
+        <md-list-item routerLink="user" *ngIf="isLoggedIn()" (click)="primsidenav.close()">User Administration</md-list-item>
+        <md-list-item routerLink="signup" *ngIf="isLoggedIn()" (click)="primsidenav.close()">Create new User</md-list-item>
+        <md-list-item routerLink="signin" *ngIf="!isLoggedIn()" (click)="primsidenav.close()">Login</md-list-item>
+        <md-list-item routerLink="signout" *ngIf="isLoggedIn()" (click)="primsidenav.close()">Logout</md-list-item>
+      </md-nav-list>
+    </md-sidenav>
+    <md-sidenav #sidenav align="end" mode="side">
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>Details</template>
+          <template md-tab-content>
+            <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+          </template>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>Feed</template>
+          <template md-tab-content></template>
+        </md-tab>
+      </md-tab-group>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+  </md-sidenav-layout> 
+</div>
