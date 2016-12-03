@@ -7,7 +7,7 @@ import { routing }              from './app.routing';
 
 import { MaterialModule }       from '@angular/material';
 
-import { AppComponent }         from './landing-page/';
+import { LandingPageComponent }         from './landing-page/';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { NotFoundComponent }    from './not-found/not-found.component';
 import { UserService }          from './shared/user.service';
@@ -27,14 +27,14 @@ import { SignupComponent, SigninComponent, SignoutComponent }      from './user/
     declarations: [                         // adds components, pipes
         DashboardComponent,
         NotFoundComponent,
-        AppComponent,
+        LandingPageComponent,
         UserComponent,
         SignupComponent,
         SigninComponent,
         SignoutComponent
     ],
     providers: [UserService, AuthService],  // adds services to the whole app
-    bootstrap: [AppComponent]               // start component
+    bootstrap: [LandingPageComponent]               // start component
 })
 
 export class AppModule { };

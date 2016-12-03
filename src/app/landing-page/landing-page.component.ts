@@ -8,13 +8,13 @@ import { AuthService }    from '../shared/auth.service';
 
 @Component({
   selector: 'app-d4n-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  templateUrl: 'landing-page.component.html',
+  styleUrls: ['landing-page.component.scss'],
   viewProviders: [MdIconRegistry],
   encapsulation: ViewEncapsulation.None,
 })
 
-export class AppComponent {
+export class LandingPageComponent {
 
 @ViewChild('sidenav') sidenav: MdSidenav;
 
