@@ -7,15 +7,13 @@ import { routing }              from './app.routing';
 
 import { MaterialModule }       from '@angular/material';
 
-import { AppComponent }         from './app.component';
+import { AppComponent }         from './landing-page/';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { NotFoundComponent }    from './not-found/not-found.component';
 import { UserService }          from './shared/user.service';
 import { AuthService }          from './shared/auth.service';
 import { UserComponent }        from './user/user.component';
-import { SignupComponent }      from './user/signup.component';
-import { SigninComponent }      from './user/signin.component';
-import { SignoutComponent }      from './user/signout.component';
+import { SignupComponent, SigninComponent, SignoutComponent }      from './user/';
 
 @NgModule({
     imports: [                              // adds other modules (packages)

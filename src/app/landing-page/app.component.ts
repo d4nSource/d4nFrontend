@@ -4,7 +4,7 @@ import { Router }    from '@angular/router';
 import { MdSidenav } from '@angular/material';
 import { MdIconRegistry } from '@angular/material';
 
-import { AuthService }    from './shared/auth.service';
+import { AuthService }    from '../shared/auth.service';
 
 @Component({
   selector: 'app-d4n-root',
@@ -22,7 +22,7 @@ export class AppComponent {
 
   constructor(private _router: Router, private authService: AuthService, mdIconRegistry: MdIconRegistry) {
     mdIconRegistry
-        .addSvgIconSetInNamespace('core', '../assets/core-icon-set.svg');
+        .addSvgIconSetInNamespace('core', '../../assets/core-icon-set.svg');
   }
 
   onClick() {

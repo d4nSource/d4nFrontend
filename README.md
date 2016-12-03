@@ -9,17 +9,17 @@
 
 ## Prerequisite
 
-On a Windows environment NPM binary packages are stored inside the folder /node_modules/bin. 
-Because this folder isn't inside the path environment these binaries need to be started with absolute path: 
+On a Windows environment NPM binary packages are stored inside the folder /node_modules/bin.
+Because this folder isn't inside the path environment these binaries need to be started with absolute path:
 
 ```bash
-./node_modules/bin/<program> 
+./node_modules/bin/<program>
 ```
 
-To simplify the usage we can use a global version which can be used for all projects. 
+To simplify the usage we can use a global version which can be used for all projects.
 
 ```bash
-npm install -g angular-cli typescript 
+npm install -g angular-cli typescript
 ```
 
 
@@ -37,11 +37,11 @@ This project uses Angular CLI to create componts and handle the testserver. More
 
 ## Documentation
 
-This projects uses Markdown for documentation. 
+This projects uses Markdown for documentation.
 
 ### separate documentations:
 
-| Content                              | Documentations                      | Status      | 
+| Content                              | Documentations                      | Status      |
 |--------------------------------------|-------------------------------------|-------------|
 | Markdown Cheatsheet                  | [Docs](docs/mardown.md)             | WIP         |
 | Angular CLI Cheatsheet               | [Docs](docs/angular-cli.md)         | WIP         |

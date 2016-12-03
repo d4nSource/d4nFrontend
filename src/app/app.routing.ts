@@ -9,6 +9,7 @@ import { SignoutComponent }      from './user/signout.component';
 
 export const routing = RouterModule.forRoot([
     { path: '', component: DashboardComponent},
+    { path: 'configurator', loadChildren: 'app/configurator/configurator.module#ConfiguratorModule'}, // lazy loading
     { path: 'dashboard', component: DashboardComponent},
     { path: 'user', component: UserComponent},
     { path: 'signup', component: SignupComponent},

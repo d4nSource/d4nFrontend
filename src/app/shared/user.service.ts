@@ -13,6 +13,5 @@ export class UserService {
     return this._http.get(`${this._baseUrl}/all`)
       .toPromise()
       .then(response => response.json());
-
   }
 }
