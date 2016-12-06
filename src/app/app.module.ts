@@ -14,6 +14,7 @@ import { UserService }          from './shared/user.service';
 import { AuthService }          from './shared/auth.service';
 import { UserComponent }        from './user/user.component';
 import { SignupComponent, SigninComponent, SignoutComponent }      from './user/';
+import { LightsComponent } from './lights/lights.component';
 
 @NgModule({
     imports: [                              // adds other modules (packages)
@@ -31,7 +32,8 @@ import { SignupComponent, SigninComponent, SignoutComponent }      from './user/
         UserComponent,
         SignupComponent,
         SigninComponent,
-        SignoutComponent
+        SignoutComponent,
+        LightsComponent
     ],
     providers: [UserService, AuthService],  // adds services to the whole app
     bootstrap: [LandingPageComponent]               // start component

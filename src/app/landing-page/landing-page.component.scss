@@ -8,20 +8,40 @@ body {
     -moz-osx-font-smooting: antialiased;
 }
 
-.fill-remaining-space {
-  // This fills the remaining space, by using flexbox. 
-  // Every toolbar row uses a flexbox row layout.
-  flex: 1 1 auto;
+.md-toolbar {
+  padding: 6px;
 }
+
+.md-toolbar-font {
+    font-size: 14px;
+    padding: 0 14px;
+}
+
+md-toolbar {
+    .fill-remaining-space {
+    // This fills the remaining space, by using flexbox. 
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+    }
+} 
 
 md-sidenav-layout {
-      height: 100vh; 
-}
+     height: 100vh;
 
-[md-raised-button] {
-//    width: 100%;
+     [md-raised-button] {
+        width: 100%;
+     } 
+
+    md-icon {
+        height: 24px;
+        width: 24px;
+    }
 }
 
 md-sidenav {
       width: 320px;
+}
+
+md-24 {
+    height: 20px;
 }
