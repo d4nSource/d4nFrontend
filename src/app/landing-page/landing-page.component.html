@@ -1,24 +1,15 @@
 <div [class.dark-theme]="isDarkTheme" class="md-toolbar">
   <md-toolbar color="primary">
     <span>
-      <button md-icon-button (click)="primsidenav.toggle()">
-        <md-icon svgIcon="core:menue" ></md-icon>
-      </button>
+      <button md-icon-button (click)="primsidenav.toggle()"></button>
       D4n Smarthome
     </span>
     <span class="fill-remaining-space"></span>
-    <span>
-      <button md-icon-button>
-        <md-icon svgIcon="core:avatar"></md-icon>
-      </button>
-    </span>
     <span *ngIf="isLoggedIn()">
       Username
     </span>
     <span>
-      <button md-icon-button [md-menu-trigger-for]="menu" >
-        <md-icon svgIcon="core:dots-vertical"></md-icon>
-      </button>
+      <button [md-menu-trigger-for]="menu"></button>
       <md-menu x-position="before" #menu="mdMenu">
           <button md-menu-item (click)="isDarkTheme = !isDarkTheme"> Toggle Theme </button>
           <button md-menu-item> Settings </button>
@@ -28,7 +19,7 @@
     </span>
     <router-outlet id="test"></router-outlet>
     <md-toolbar-row color="accent" class="md-toolbar-font">
-      <md-icon svgIcon="core:light-bulb"></md-icon><span class="md-toolbar-font">Licht:</span>
+      <span class="md-toolbar-font">Licht:</span>
       <span class="md-toolbar-font">Wohnzimmer</span>
       <span class="md-toolbar-font">Schlafzimmer</span>
       <span class="md-toolbar-font">Küche</span>
@@ -38,7 +29,7 @@
     </md-toolbar-row>
   </md-toolbar>
 
-  <md-sidenav-layout>
+  <md-sidenav-container>
     <md-sidenav #primsidenav mode="over">
       <md-nav-list>
         <md-list-item routerLink="lights" (click)="primsidenav.close()"><md-icon svgIcon="core:light-bulb"></md-icon>Licht</md-list-item>
@@ -67,5 +58,5 @@
       </md-tab-group>
     </md-sidenav>
     <router-outlet></router-outlet>
-  </md-sidenav-layout> 
+  </md-sidenav-container> 
 </div>

@@ -1,5 +1,6 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Router }    from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Router }       from '@angular/router';
 
 import { MdSidenav } from '@angular/material';
 import { MdIconRegistry } from '@angular/material';
@@ -8,8 +9,8 @@ import { AuthService }    from '../shared/auth.service';
 
 @Component({
   selector: 'app-d4n-root',
-  templateUrl: 'landing-page.component.html',
-  styleUrls: ['landing-page.component.scss'],
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.scss'],
   viewProviders: [MdIconRegistry],
   encapsulation: ViewEncapsulation.None,
 })
@@ -20,9 +21,12 @@ export class LandingPageComponent {
 
   isDarkTheme = false;
 
-  constructor(private _router: Router, private authService: AuthService, mdIconRegistry: MdIconRegistry) {
+  constructor(private _router: Router, 
+              private authService: AuthService,
+              mdIconRegistry: MdIconRegistry,
+              sanitizer: DomSanitizer) {
     mdIconRegistry
-        .addSvgIconSetInNamespace('core', '../../assets/core-icon-set.svg');
+        .addSvgIconSetInNamespace('core', sanitizer.bypassSecurityTrustResourceUrl('../../assets/core-icon-set.svg'));
   }
 
   onClick() {

@@ -5,7 +5,7 @@ import { AuthService } from '../shared/auth.service';
 
 @Component({
     selector: 'app-signout',
-    templateUrl: 'signout.component.html'
+    templateUrl: './signout.component.html'
 })
 export class SignoutComponent implements OnInit {
     constructor( private authService: AuthService, private router: Router) { }

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'd4n-not-found',
-  templateUrl: 'not-found.component.html',
-  styleUrls: ['not-found.component.scss']
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.scss']
 })
 export class NotFoundComponent implements OnInit {
 

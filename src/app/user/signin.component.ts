@@ -6,7 +6,7 @@ import { AuthService } from '../shared/auth.service';
 
 @Component({
     selector: 'app-signin',
-    templateUrl: 'signin.component.html'
+    templateUrl: './signin.component.html'
 })
 export class SigninComponent implements OnInit {
     constructor(private authService: AuthService, private router: Router) { }
