@@ -1,5 +1,4 @@
-<div [class.dark-theme]="isDarkTheme" class="md-toolbar">
-  <md-toolbar color="primary">
+  <md-toolbar color="primary" class="md-elevation-z4" [class.dark-theme]="isDarkTheme">
     <span>
       <button md-icon-button (click)="primsidenav.toggle()"></button>
       D4n Smarthome
@@ -18,15 +17,6 @@
       </md-menu>
     </span>
     <router-outlet id="test"></router-outlet>
-    <md-toolbar-row color="accent" class="md-toolbar-font">
-      <span class="md-toolbar-font">Licht:</span>
-      <span class="md-toolbar-font">Wohnzimmer</span>
-      <span class="md-toolbar-font">Schlafzimmer</span>
-      <span class="md-toolbar-font">Küche</span>
-      <span class="md-toolbar-font">Flur</span>
-      <span class="md-toolbar-font">Büro</span>
-      <span class="md-toolbar-font">Gästezimmer</span>
-    </md-toolbar-row>
   </md-toolbar>
 
   <md-sidenav-container>
@@ -57,6 +47,12 @@
         </md-tab>
       </md-tab-group>
     </md-sidenav>
+    <ngx-charts-advanced-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
     <router-outlet></router-outlet>
-  </md-sidenav-container> 
-</div>
+  </md-sidenav-container>
