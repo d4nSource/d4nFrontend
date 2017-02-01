@@ -18,8 +18,7 @@
       "prefix": "d4n",
       "mobile": false,
       "styles": [
-        "styles.scss",
-        "../node_modules/@swimlane/ngx-charts/release/ngx-charts.css"
+        "styles.scss"
       ],
       "scripts": [
         "../node_modules/hammerjs"
