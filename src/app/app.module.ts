@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule }          from '@angular/forms';
 import { HttpModule }           from '@angular/http';
 import { routing }              from './app.routing';
 
+import { FlexLayoutModule }     from '@angular/flex-layout';
 import { MaterialModule }       from '@angular/material';
 import { NgxChartsModule }      from '@swimlane/ngx-charts';
 
@@ -25,7 +26,8 @@ import { LightsComponent } from './lights/lights.component';
         ReactiveFormsModule,                // to use model driven forms
         HttpModule,
         NgxChartsModule,                    // Ngx Charts
-        MaterialModule.forRoot()            // module for all Material2 components
+        MaterialModule.forRoot(),           // module for all Material2 components
+        FlexLayoutModule.forRoot(),         // Flex Layout Directives
     ],
     declarations: [                         // adds components, pipes
         DashboardComponent,
