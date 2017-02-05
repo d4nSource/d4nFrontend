@@ -21,6 +21,24 @@ export class LandingPageComponent {
 
   isDarkTheme = false;
 
+  gradient: boolean =  true;
+  single: any[] = [
+    {
+      'name': 'used',
+      'value': 200
+    },
+    {
+      'name': 'free',
+      'value': 500
+    }
+  ];
+
+  view: any[] = [50, 50];
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+
   constructor(private _router: Router, 
               private authService: AuthService,
               mdIconRegistry: MdIconRegistry,
@@ -36,4 +54,10 @@ export class LandingPageComponent {
   isLoggedIn() {
     return this.authService.isLoggedIn();
   }
+
+
+  onSelect(event) {
+    console.log(event);
+  }
+
 }

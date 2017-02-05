@@ -1,62 +1,14 @@
-<div [class.dark-theme]="isDarkTheme" class="md-toolbar">
-  <md-toolbar color="primary">
-    <span>
-      <button md-icon-button (click)="primsidenav.toggle()"></button>
+<md-toolbar class="md-elevation-z4" color="primary">
+  <div fxLayout="row" fxFlexLayout="start center" style="width:100%">
+    <div>
       D4n Smarthome
-    </span>
-    <span class="fill-remaining-space"></span>
-    <span *ngIf="isLoggedIn()">
-      Username
-    </span>
-    <span>
-      <button [md-menu-trigger-for]="menu"></button>
-      <md-menu x-position="before" #menu="mdMenu">
-          <button md-menu-item (click)="isDarkTheme = !isDarkTheme"> Toggle Theme </button>
-          <button md-menu-item> Settings </button>
-          <button md-menu-item> Help </button>
-          <button md-menu-item [disabled]="!isLoggedIn()" routerLink="signout"> Sign Out </button>
-      </md-menu>
-    </span>
-    <router-outlet id="test"></router-outlet>
-    <md-toolbar-row color="accent" class="md-toolbar-font">
-      <span class="md-toolbar-font">Licht:</span>
-      <span class="md-toolbar-font">Wohnzimmer</span>
-      <span class="md-toolbar-font">Schlafzimmer</span>
-      <span class="md-toolbar-font">Küche</span>
-      <span class="md-toolbar-font">Flur</span>
-      <span class="md-toolbar-font">Büro</span>
-      <span class="md-toolbar-font">Gästezimmer</span>
-    </md-toolbar-row>
-  </md-toolbar>
-
-  <md-sidenav-container>
-    <md-sidenav #primsidenav mode="over">
-      <md-nav-list>
-        <md-list-item routerLink="lights" (click)="primsidenav.close()"><md-icon svgIcon="core:light-bulb"></md-icon>Licht</md-list-item>
-        <md-list-item routerLink="dashboard" (click)="primsidenav.close()">Dashboard</md-list-item>
-        <md-list-item [routerLink]="['dashboard', 1]" (click)="primsidenav.close()">Dashboard with Option</md-list-item>
-        <md-list-item routerLink="configurator" *ngIf="isLoggedIn()" (click)="primsidenav.close()">Configuration</md-list-item>
-        <md-list-item routerLink="user" *ngIf="isLoggedIn()" (click)="primsidenav.close()">User Administration</md-list-item>
-        <md-list-item routerLink="signup" *ngIf="isLoggedIn()" (click)="primsidenav.close()">Create new User</md-list-item>
-        <md-list-item routerLink="signin" *ngIf="!isLoggedIn()" (click)="primsidenav.close()">Login</md-list-item>
-        <md-list-item routerLink="signout" *ngIf="isLoggedIn()" (click)="primsidenav.close()">Logout</md-list-item>
-        <button md-raised-button (click)="primsidenav.close()" color="primary">CLOSE</button>
-      </md-nav-list>
-    </md-sidenav>
-    <md-sidenav #sidenav align="end" mode="side">
-      <md-tab-group>
-        <md-tab>
-          <template md-tab-label>Details</template>
-          <template md-tab-content>
-            <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
-          </template>
-        </md-tab>
-        <md-tab>
-          <template md-tab-label>Feed</template>
-          <template md-tab-content></template>
-        </md-tab>
-      </md-tab-group>
-    </md-sidenav>
-    <router-outlet></router-outlet>
-  </md-sidenav-container> 
+    </div>
+    <div fxFlex></div>
+    <div>
+      rechte Seite
+    </div>
+  </div>
+</md-toolbar>
+<div style="margin-top:10px">
+  <router-outlet></router-outlet>
 </div>
