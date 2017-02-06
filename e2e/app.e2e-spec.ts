@@ -1,10 +1,10 @@
-import { D4nSmartFePage } from './app.po';
+import { D4nFePage } from './app.po';
 
-describe('d4n-smart-fe App', function() {
-  let page: D4nSmartFePage;
+describe('d4n-fe App', function() {
+  let page: D4nFePage;
 
   beforeEach(() => {
-    page = new D4nSmartFePage();
+    page = new D4nFePage();
   });
 
   it('should display message saying app works', () => {

@@ -1,6 +1,6 @@
-import { browser, element, by } from 'protractor/globals';
+import { browser, element, by } from 'protractor';
 
-export class D4nSmartFePage {
+export class D4nFePage {
   navigateTo() {
     return browser.get('/');
   }
