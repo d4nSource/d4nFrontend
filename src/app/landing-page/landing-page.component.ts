@@ -1,11 +1,11 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Router }       from '@angular/router';
+import { Router } from '@angular/router';
 
 import { MdSidenav } from '@angular/material';
 import { MdIconRegistry } from '@angular/material';
 
-import { AuthService }    from '../shared/auth.service';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-d4n-root',
@@ -21,7 +21,7 @@ export class LandingPageComponent {
 
   isDarkTheme = false;
 
-  gradient: boolean =  true;
+  gradient =  true;
   single: any[] = [
     {
       'name': 'used',
@@ -39,22 +39,18 @@ export class LandingPageComponent {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor(private _router: Router, 
-              private authService: AuthService,
-              mdIconRegistry: MdIconRegistry,
-              sanitizer: DomSanitizer) {
+  constructor(private router: Router, private authService: AuthService, mdIconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
     mdIconRegistry
-        .addSvgIconSetInNamespace('core', sanitizer.bypassSecurityTrustResourceUrl('../../assets/core-icon-set.svg'));
+        .addSvgIconSetInNamespace('core', sanitizer.bypassSecurityTrustResourceUrl('../assets/core-icon-set.svg'));
   }
 
   onClick() {
-    this._router.navigate(['dashboard', 2]);
+    this.router.navigate(['dashboard', 2]);
   }
 
   isLoggedIn() {
     return this.authService.isLoggedIn();
   }
-
 
   onSelect(event) {
     console.log(event);

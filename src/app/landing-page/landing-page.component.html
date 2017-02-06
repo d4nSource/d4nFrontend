@@ -1,14 +1,9 @@
 <md-toolbar class="md-elevation-z4" color="primary">
-  <div fxLayout="row" fxFlexLayout="start center" style="width:100%">
-    <div>
-      D4n Smarthome
-    </div>
-    <div fxFlex></div>
-    <div>
-      rechte Seite
-    </div>
+  <div fxLayout="row" fxLayoutAlign="start center" style="width:100%">
+    <div fxFlexAlign="baseline"><md-icon svgIcon="core:menue"></md-icon></div>
+    <div fxFlexAlign="start">Smarthome</div>
+    <div fxFlex fxFlexAlign="start"></div>
+    <div fxFlexAlign="baseline"><md-icon svgIcon="core:dots-vertical"></md-icon></div> 
   </div>
 </md-toolbar>
-<div style="margin-top:10px">
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

@@ -8,6 +8,10 @@ body {
     -moz-osx-font-smooting: antialiased;
 }
 
+md-toolbar md-icon {
+  margin: 0 8px;
+}
+
 .md-elevation-z0 {
     box-shadow: 0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)
 }

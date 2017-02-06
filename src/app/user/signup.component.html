@@ -1,40 +1,42 @@
-<h1> Datadriven Signup </h1>
-<md-card>
-    <md-card-content>
-        <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
-            <div>
-                <div class="form-group">
-                    <md-input  placeholder="Login Name" type="text" 
-                            class="form-control" 
-                            id="nickname"
-                            formControlName="nickname"></md-input>
+<div fxLayout="row" fxLayoutAlign="center center" style="width: 100%">
+    <h1> Datadriven Signup </h1>
+    <md-card>
+        <md-card-content>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
+                <div>
+                    <div class="form-group">
+                        <md-input  placeholder="Login Name" type="text" 
+                                class="form-control" 
+                                id="nickname"
+                                formControlName="nickname"></md-input>
+                    </div>
+                    <div class="form-group">
+                        <md-input  placeholder="First Name" type="text" 
+                                class="form-control" 
+                                id="firstname"
+                                formControlName="firstname"></md-input>
+                    </div>
+                    <div class="form-group">
+                        <md-input  placeholder="Last Name" type="text" 
+                                class="form-control" 
+                                id="lastname"
+                                formControlName="lastname"></md-input>
+                    </div>
+                    <div class="form-group">
+                        <md-input placeholder="eMail" type="text" 
+                                class="form-control" 
+                                id="email"
+                                formControlName="email"></md-input>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <md-input  placeholder="First Name" type="text" 
+                    <md-input placeholder="Password" type="password" 
                             class="form-control" 
-                            id="firstname"
-                            formControlName="firstname"></md-input>
+                            id="password"
+                            formControlName="password"></md-input>
                 </div>
-                <div class="form-group">
-                    <md-input  placeholder="Last Name" type="text" 
-                            class="form-control" 
-                            id="lastname"
-                            formControlName="lastname"></md-input>
-                </div>
-                <div class="form-group">
-                    <md-input placeholder="eMail" type="text" 
-                            class="form-control" 
-                            id="email"
-                            formControlName="email"></md-input>
-                </div>
-            </div>
-            <div class="form-group">
-                <md-input placeholder="Password" type="password" 
-                        class="form-control" 
-                        id="password"
-                        formControlName="password"></md-input>
-            </div>
-            <button md-raised-button color="primary" type="submit">Submit</button> 
-        </form>
-    </md-card-content>
-</md-card>
+                <button md-raised-button color="primary" type="submit">Submit</button> 
+            </form>
+        </md-card-content>
+    </md-card>
+</div>

@@ -1,21 +1,21 @@
-import { BrowserModule }        from '@angular/platform-browser';
-import { NgModule }             from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { FormsModule, ReactiveFormsModule }          from '@angular/forms';
-import { HttpModule }           from '@angular/http';
-import { routing }              from './app.routing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { routing } from './app.routing';
 
-import { FlexLayoutModule }     from '@angular/flex-layout';
-import { MaterialModule }       from '@angular/material';
-import { NgxChartsModule }      from '@swimlane/ngx-charts';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '@angular/material';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-import { LandingPageComponent }         from './landing-page/';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { NotFoundComponent }    from './not-found/not-found.component';
-import { UserService }          from './shared/user.service';
-import { AuthService }          from './shared/auth.service';
-import { UserComponent }        from './user/user.component';
-import { SignupComponent, SigninComponent, SignoutComponent }      from './user/';
+import { LandingPageComponent } from './landing-page/';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { UserService } from './shared/user.service';
+import { AuthService } from './shared/auth.service';
+import { UserComponent } from './user/user.component';
+import { SignupComponent, SigninComponent, SignoutComponent } from './user/';
 import { LightsComponent } from './lights/lights.component';
 
 @NgModule({
@@ -40,7 +40,7 @@ import { LightsComponent } from './lights/lights.component';
         LightsComponent
     ],
     providers: [UserService, AuthService],  // adds services to the whole app
-    bootstrap: [LandingPageComponent]               // start component
+    bootstrap: [LandingPageComponent]       // start component
 })
 
 export class AppModule { };

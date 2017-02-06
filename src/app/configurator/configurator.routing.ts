@@ -1,6 +1,6 @@
-import { RouterModule, Routes }         from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { ConfigratorComponent }         from './configurator.component';
+import { ConfigratorComponent } from './configurator.component';
 
 const CONFIGURATOR_ROUTES: Routes = [
     { path: '', component: ConfigratorComponent }
