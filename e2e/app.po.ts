@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class D4nFePage {
+export class D4nSmarthomePage {
   navigateTo() {
     return browser.get('/');
   }
