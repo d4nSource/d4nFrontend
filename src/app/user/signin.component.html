@@ -1,17 +1,19 @@
-<div fxLayout="row" fxLayoutAlign="center center" style="margin-top:10px; height: 100%" >
+<div fxLayout="row" fxLayoutAlign="center center" style="margin-top:10px; height: 100%">
   <div fxFlexAlign="center">
     <md-card>
       <h1>Login</h1>
       <form (ngSubmit)="onSubmit(signinForm)" #signinForm="ngForm">
+        <md-input-container>
         <div>
           <div class="form-group">
-            <md-input placeholder="eMail" type="text" class="form-control" id="email" ngModel name="email"></md-input>
+            <input mdInput placeholder="eMail" type="text" class="form-control" id="email" ngModel name="email">
           </div>
         </div>
         <div class="form-group">
-          <md-input placeholder="Password" type="password" class="form-control" id="password" ngModel name="password" required #email="ngModel"></md-input>
+          <input mdInput placeholder="Password" type="password" class="form-control" id="password" ngModel name="password" required #email="ngModel">
         </div>
         <button md-raised-button color="primary" type="submit" [disabled]="!signinForm.valid">Submit</button>
+        </md-input-container>
     </form>
     </md-card>
   </div>

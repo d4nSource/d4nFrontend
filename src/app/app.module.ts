@@ -26,7 +26,7 @@ import { LightsComponent } from './lights/lights.component';
         ReactiveFormsModule,                // to use model driven forms
         HttpModule,
         NgxChartsModule,                    // Ngx Charts
-        MaterialModule.forRoot(),           // module for all Material2 components
+        MaterialModule,                     // module for all Material2 components
         FlexLayoutModule.forRoot(),         // Flex Layout Directives
     ],
     declarations: [                         // adds components, pipes

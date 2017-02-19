@@ -22,8 +22,7 @@
         "d4n-core.scss"
       ],
       "scripts": [],
-      "environments": {
-        "source": "environments/environment.ts",
+      "environmentSource": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }

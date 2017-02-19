@@ -3,39 +3,41 @@
     <md-card>
         <md-card-content>
             <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)">
+                <md-input-container>
                 <div>
                     <div class="form-group">
-                        <md-input  placeholder="Login Name" type="text" 
+                        <input mdInput  placeholder="Login Name" type="text" 
                                 class="form-control" 
                                 id="nickname"
-                                formControlName="nickname"></md-input>
+                                formControlName="nickname">
                     </div>
                     <div class="form-group">
-                        <md-input  placeholder="First Name" type="text" 
+                        <input  mdInput placeholder="First Name" type="text" 
                                 class="form-control" 
                                 id="firstname"
-                                formControlName="firstname"></md-input>
+                                formControlName="firstname">
                     </div>
                     <div class="form-group">
-                        <md-input  placeholder="Last Name" type="text" 
+                        <input mdInput  placeholder="Last Name" type="text" 
                                 class="form-control" 
                                 id="lastname"
-                                formControlName="lastname"></md-input>
+                                formControlName="lastname">
                     </div>
                     <div class="form-group">
-                        <md-input placeholder="eMail" type="text" 
+                        <input mdInput placeholder="eMail" type="text" 
                                 class="form-control" 
                                 id="email"
-                                formControlName="email"></md-input>
+                                formControlName="email">
                     </div>
                 </div>
                 <div class="form-group">
-                    <md-input placeholder="Password" type="password" 
+                    <input mdInput placeholder="Password" type="password" 
                             class="form-control" 
                             id="password"
-                            formControlName="password"></md-input>
+                            formControlName="password">
                 </div>
                 <button md-raised-button color="primary" type="submit">Submit</button> 
+                </md-input-container>
             </form>
         </md-card-content>
     </md-card>
