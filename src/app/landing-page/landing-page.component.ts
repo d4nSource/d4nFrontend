@@ -41,7 +41,8 @@ export class LandingPageComponent {
 
   constructor(private router: Router, private authService: AuthService, mdIconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
     mdIconRegistry
-        .addSvgIconSetInNamespace('core', sanitizer.bypassSecurityTrustResourceUrl('../assets/core-icon-set.svg'));
+        .addSvgIconSetInNamespace('core', sanitizer.bypassSecurityTrustResourceUrl('../assets/core-icon-set.svg'))
+        .addSvgIconInNamespace('assets','appcenter', sanitizer.bypassSecurityTrustResourceUrl('../assets/appcenter.svg'));
   }
 
   onClick() {
