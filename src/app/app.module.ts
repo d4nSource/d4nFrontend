@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
@@ -21,13 +22,14 @@ import { LightsComponent } from './lights/lights.component';
 @NgModule({
     imports: [                              // adds other modules (packages)
         BrowserModule,
+        BrowserAnimationsModule,
         routing,
         FormsModule,                        // to use template driven forms
         ReactiveFormsModule,                // to use model driven forms
         HttpModule,
         NgxChartsModule,                    // Ngx Charts
         MaterialModule,                     // module for all Material2 components
-        FlexLayoutModule.forRoot(),         // Flex Layout Directives
+        FlexLayoutModule                    // Flex Layout Directives
     ],
     declarations: [                         // adds components, pipes
         DashboardComponent,
