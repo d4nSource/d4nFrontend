@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from '@angular/material';
+import { MdToolbarModule, MdCardModule, MdInputModule, MdIconModule } from '@angular/material';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { LandingPageComponent } from './landing-page/';
@@ -28,7 +28,7 @@ import { LightsComponent } from './lights/lights.component';
         ReactiveFormsModule,                // to use model driven forms
         HttpModule,
         NgxChartsModule,                    // Ngx Charts
-        MaterialModule,                     // module for all Material2 components
+        MdCardModule,MdToolbarModule,MdInputModule,MdIconModule,                     // module for all Material2 components
         FlexLayoutModule                    // Flex Layout Directives
     ],
     declarations: [                         // adds components, pipes
