@@ -1,0 +1,15 @@
+image: node:6
+
+stages:
+- build
+- test
+- release
+
+build-server:
+  stage: build
+  script:
+    - npm install
+    - npm build
+  cache:
+    paths:
+      - node_modules/

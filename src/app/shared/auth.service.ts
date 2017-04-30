@@ -7,10 +7,13 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+declare var localStorage : any;
+
 @Injectable()
 export class AuthService {
 
-  constructor(private _http: Http) { }
+  constructor(private _http: Http) {
+   }
 
   signup(user: User) {
       const body = JSON.stringify(user);
